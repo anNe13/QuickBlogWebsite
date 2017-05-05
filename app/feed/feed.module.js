@@ -1,0 +1,1 @@
+angular.module("feed", ["ngAnimate", "ui.bootstrap", "ngRoute", "feed"]);

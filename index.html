@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <title>MyBlogg</title>
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/ngmap/build/scripts/ng-map.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js"></script>
+
+   <!-- <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFydlnzVs916LcEaSAHV6r9krk3Ty1SNg&callback=initMap">
+    </script>-->
+
+
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+    <script src="app/app.controller.js"></script>
+    <script src="app/app.service.js"></script>
+
+    <script src="app/feed/feed.module.js"></script>
+    <script src="app/feed/feed.controller.js"></script>
+    <script src="app/feed/feed.service.js"></script>
+
+
+</head>
+<body>
+
+<div ng-app="app" class="container-fluid">
+
+
+    <div ng-view>
+
+    </div>
+
+
+
+</div>
+</body>
+</html>
