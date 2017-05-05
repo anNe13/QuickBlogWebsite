@@ -29,13 +29,13 @@
 
         <li class="list-group-item list-group-item-action wall-field"
             ng-class="{'full-post': post.active, 'small-post': !post.active}">
-            <h3 id="postTitle">{{post.title}}</h3>
+            <h3 id="postTitle">{{post.title}} - {{post.username}}</h3>
             <p id="postContent">{{post.content}}</p>
             <button type="button" style="float: right" class="btn" ng-click="showChilds(post)">
                 <span ng-show="!post.active" class="glyphicon glyphicon-plus"></span>
                 <span ng-show="post.active" class="glyphicon glyphicon-minus"></span>
             </button>
-            <footer id="postSpec"><a>{{post.username}}  <span class="glyphicon glyphicon-user"></span></a>
+            <footer id="postSpec"><p> {{post.username}}  <span class="glyphicon glyphicon-user"></span></p>
                 <p>{{post.date}}</p>
             <p ng-show="post.active">{{post.location}}</p> </footer>
             <div ng-show="post.active" class="full-window-post">
