@@ -47,8 +47,24 @@
 </head>
 <body>
 
+
+
 <div ng-app="app" class="container-fluid">
 
+    <nav class="navbar transparent navbar-fixed-top">
+        <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li>
+                <div class="form-group has-success has-feedback input-group-lg">
+                    <input type=text class="form-control" ng-model="searchTerm" placeholder="Search"/>
+
+                    <span style="color: azure; margin-top: 4%"  class="glyphicon glyphicon-search form-control-feedback"></span>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+    </nav>
 
     <div ng-view>
 
