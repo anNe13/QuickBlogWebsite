@@ -1,35 +1,27 @@
 <div class="container-fluid">
 
+    <div class="postcontent">
+        <ul class="list-group" ng-repeat="post in posts | orderBy: post.id : true |  filter: searchTerm">
 
+            <li class="list-group-item list-group-item-action wall-field"
+                ng-class="{'full-post': post.active, 'small-post': !post.active}">
+                <h3 id="postTitle">{{post.title}}</h3>
+                <p id="postContent">{{post.content}}</p>
+                <button type="button" style="float: right" class="btn" ng-click="showChilds(post)">
+                    <span ng-show="!post.active" class="glyphicon glyphicon-plus"></span>
+                    <span ng-show="post.active" class="glyphicon glyphicon-minus"></span>
+                </button>
+                <footer id="postSpec"><p><span class="glyphicon glyphicon-user"></span> {{post.userName}}</p>
+                    <p>{{post.date}}</p>
+                    <p ng-show="post.active">{{post.location}}</p></footer>
+                <div ng-show="post.active" class="full-window-post">
 
+                    <div ng-hide="post.location.length < 1">
 
-<div class="postcontent">
-    <ul class="list-group" ng-repeat="post in posts | orderBy: post.id : true |  filter: searchTerm" >
-
-        <li class="list-group-item list-group-item-action wall-field"
-            ng-class="{'full-post': post.active, 'small-post': !post.active}">
-            <h3 id="postTitle">{{post.title}}</h3>
-            <p id="postContent">{{post.content}}</p>
-            <button type="button" style="float: right" class="btn" ng-click="showChilds(post)">
-                <span ng-show="!post.active" class="glyphicon glyphicon-plus"></span>
-                <span ng-show="post.active" class="glyphicon glyphicon-minus"></span>
-            </button>
-            <footer id="postSpec"><p><span class="glyphicon glyphicon-user"></span>  {{post.userName}}</p>
-                <p>{{post.date}}</p>
-            <p ng-show="post.active">{{post.location}}</p> </footer>
-            <div ng-show="post.active" class="full-window-post">
-
-<div ng-hide="post.location.length < 1">
-
-                <ng-map class="g-map" id="{{ 'map-' + post.id }}"></ng-map>
-</div>
-            </div>
-
-
-        </li>
-    </ul>
-
-
-
-</div>
+                        <ng-map class="g-map" id="{{ 'map-' + post.id }}"></ng-map>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
